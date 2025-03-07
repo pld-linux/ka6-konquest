@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.2
+%define		kdeappsver	24.12.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		konquest
 Summary:	konquest
 Name:		ka6-%{kaname}
-Version:	24.12.2
+Version:	24.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	738157735644d6d59d0c0d3175449c53
+# Source0-md5:	823eb49896e7cf347e91871efb63b8c4
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
