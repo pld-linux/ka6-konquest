@@ -3,23 +3,24 @@
 %bcond_with	tests		# build with tests
 %define		kdeappsver	25.04.0
 %define		kframever	5.94.0
-%define		qtver		5.15.2
+%define		qtver		6.0.0
 %define		kaname		konquest
 Summary:	konquest
 Name:		ka6-%{kaname}
 Version:	25.04.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	c63156ba220e82fc764693b7bde946d9
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
-BuildRequires:	Qt6Gui-devel >= 5.11.1
-BuildRequires:	Qt6Qml-devel >= 5.11.1
-BuildRequires:	Qt6Quick-devel >= 5.11.1
-BuildRequires:	Qt6Svg-devel
-BuildRequires:	Qt6Widgets-devel
+BuildRequires:	Qt6Gui-devel >= %{qtver}
+BuildRequires:	Qt6Qml-devel >= %{qtver}
+BuildRequires:	Qt6Quick-devel >= %{qtver}
+BuildRequires:	Qt6Scxml-devel >= %{qtver}
+BuildRequires:	Qt6Svg-devel >= %{qtver}
+BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
 BuildRequires:	ka6-libkdegames-devel >= %{kdeappsver}
@@ -49,10 +50,10 @@ other planets by sending ships to them. The goal is to build an
 interstellar empire and ultimately conquer all other player's planets.
 
 %description -l pl.UTF-8
-Konquest jest wersją KDE Gnu-Lactic Konquesta. Gracze zdobywają
-inne planety wysyłając statki kosmiczne na nie. Celem jest
-zbudowanie intergalakatycznego imperium i ostatczne podbicie planet
-innych graczy.
+Konquest jest wersją KDE Gnu-Lactic Konquesta. Gracze zdobywają inne
+planety wysyłając statki kosmiczne na nie. Celem jest zbudowanie
+intergalakatycznego imperium i ostatczne podbicie planet innych
+graczy.
 
 %prep
 %setup -q -n %{kaname}-%{version}
